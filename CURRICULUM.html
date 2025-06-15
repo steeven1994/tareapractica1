@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Currículum Vitae Moderno</title>
+  
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e0e7ee; 
+            color: #2d3748; 
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .cv-wrapper {
+            max-width: 1200px; 
+            margin: 40px auto; 
+            display: flex;
+            flex-direction: column; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18); 
+            border-radius: 20px; 
+            overflow: hidden; 
+        }
+
+        .left-column {
+            background-color: #3f51b5; 
+            color: #ffffff; 
+            padding: 30px;
+            text-align: center;
+            flex-shrink: 0; 
+            width: 100%; 
+        }
+
+        .right-column {
+            background-color: #ffffff;
+            padding: 30px;
+            flex-grow: 1; 
+            width: 100%;
+        }
+
+       
+        @media (min-width: 768px) {
+            .cv-wrapper {
+                flex-direction: row; 
+            .left-column {
+                width: 300px; 
+                min-height: 100vh; 
+                position: sticky; 
+                top: 0; 
+                align-self: flex-start; 
+            }
+            .right-column {
+                padding: 40px 60px; 
+        }
+
+        .profile-pic {
+            width: 180px; 
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #ffab00; 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            margin: 0 auto 25px auto;
+            display: block; 
+        }
+
+        .left-column h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .left-column .title-text {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; 
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    opacity: 0.95;
+    color: #ffffff; 
+}
+
+
+.contact-info .contact-detail {
+    color: #ffeb3b; 
+    font-weight: 600; 
+}
+
+
+.contact-info p .fa-solid, .contact-info p .fa-brands {
+    color: #ffab00; 
+    font-size: 1.2em; 
+}
+
+.contact-info p a {
+    color: #ffffff; 
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+}
+.contact-info p a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+        .right-column h2 {
+            color: #ff4500; 
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 4px solid #ffeb3b; 
+        }
+
+        h3 {
+            color: #3f51b5; 
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: #4a5568;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 28px;
+            margin-bottom: 12px;
+            color: #4a5568;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .section-content {
+            margin-bottom: 30px;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 28px;
+            padding: 20px;
+            background-color: #f7fafc;
+            border-left: 8px solid #00bfff; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-item p, .education-item p, .project-item p {
+            font-size: 1rem;
+            color: #718096;
+        }
+
+        .skill-category, .language-section {
+            background-color: rgba(255, 255, 255, 0.15); 
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .skill-category h3, .language-section h3 {
+            color: #ffab00; 
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(170, 187, 175, 0.677); 
+            padding-bottom: 8px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+            gap: 12px; 
+        }
+
+        .skill-item {
+            background-color: #ff8c00; 
+            color: #ffffff; 
+            padding: 10px 18px; 
+            border-radius: 25px; 
+            font-size: 0.95rem;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(214, 128, 128, 0.2);
+            transition: transform 0.2s ease-in-out; 
+        }
+        .skill-item:hover {
+            transform: translateY(-3px); 
+        }
+
+        .language-section ul {
+            list-style: none; 
+            padding: 0;
+            margin: 0;
+        }
+        .language-section li {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .resumen-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #36454F; 
+        }
+
+         </style>
+</head>
+<body>
+
+    <div class="cv-wrapper">
+                <div class="left-column">
+            <header>
+                <img src="C:\tareas 02\Imagen\foto (1).jpg" alt="C:\tarea 01\Imagen\foto (1).jpg" class="profile-pic">
+                <h1>STEEVEN PROAÑO BERMEO</h1>
+               
+                <div class="contact-info mt-8">
+                    <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:steeven994@gmail.com">steeven994@gmail.com</a></p>
+                    <p class="contact-detail"><i class="fa-solid fa-phone"></i> Teléfono: +593 98 198 1099 </p>
+                    <p class="contact-detail"><i class="fa-solid fa-location-dot"></i> Ubicación: Tu Ciudad, Tu País</p>
+                     <p><i class="fa-brands fa-linkedin"></i> LinkedIn: <a href="www.linkedin.com/in/steeven-proaño-3846722ab" target="_blank">linkedin.com/in/tuperfil</a></p>
+                </div>
+            </header>
+
+            
+
+            <section id="idiomas-sidebar" class="language-section">
+                <h3>Idiomas</h3>
+                <ul>
+                    <li>Español: Nativo</li>
+                    <li>Inglés: Básico (A2)</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Columna Derecha: Resumen, Experiencia, Educación, Proyectos -->
+        <div class="right-column">
+            <main>
+                <!-- Sección: Resumen Profesional -->
+                <section id="objetivo">
+                    <h2>Objetivo</h2>
+                    <div class="section-content objetivo-text">
+                        <p>Formar parte de una prestigiosa empresa en la que pueda poner en práctica los conocimientos que tengo, que me ofrezca la oportunidad de superar todas mis metas y que me permita mejorar y crecer en el ámbito laboral,personal e intelectual.</p>
+                    </div>
+                </section>
+
+                <!-- Sección: Experiencia Laboral -->
+                <section id="experiencia">
+        <h2>EXPERIENCIA LABORAL</h2>
+        <article>
+        <h3>Laboratorios Vida S.A.(Labovida)</h3>
+        <p>Cargo: Auxiliar de Control de Calidad</p>
+        <p>Desde 16 feb del 2017 hasta fecha actual</p>
+        <ul>
+            <li>Limpieza de area y materiales</li>
+            <li>Analista de volumen de productos</li>
+
+        </ul>
+        </article>
+        <article>
+
+        <h3>OPACIFIC S.A</h3>
+        <p>Cargo: Inspector-Despachador</p>
+        <p>Octubre 2015 a Dic 2016</p>
+        <ul>
+            <li>Supervisor de patio</li>
+            <li>Despachador de contenedores</li>
+
+        </ul>
+        </article>
+        <article>
+        <h3>AUDIOVISIÓN ELECTRÓNICA AUDIOELEC S.A</h3>
+        <p>Cargo: Operador de Ensamblaje de celular</p>
+        <p>Año 2014 al 2015</p>
+        <ul>
+            <li>Operador de Ensamblaje</li>
+        </ul>
+        </article>
+    </section>
+
+                <!-- Sección: Educación -->
+                <section id="educacion">
+        <h2>TITULOS OBTENIDOS</h2>
+        <article>
+            <h3>Titulo Universitario:</h3>
+            <h3>Tecnologo en Analisis de Sistema</h3>
+            <p>Instituto Tecnologico Bolibariano ITB</p>
+        </article>
+        <article>
+            <h3>Titulo Bachiller:</h3>
+            <h3>Tecnico en Comercio y Administracion</h3>
+            <p>Especialización Administracion de sistema</p>
+            <p>Colegio Fiscal Mixto “PROVINCIA DEL COTOPAXI”</p>
+        </article>
+        <article>
+            <h3>Curso Adicional:</h3>
+            <h3>Técnico en Mantenimiento de reparación de Impresora, computadores
+             y Redes</h3>
+            <p>CELC Computer and English learning Courses</p>
+        </article>    
+    </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

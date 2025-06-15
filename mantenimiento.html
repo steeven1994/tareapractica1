@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento del Hogar - Tu Solución Confiable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: #0779e4 3px solid;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #0779e4;
+    font-weight: bold;
+}
+
+/* Botón General */
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #0779e4;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #055ba3;
+}
+
+/* Sección Hero (Inicio) */
+.hero {
+    background: #505050 url('https://via.placeholder.com/1500x500?text=Imagen+de+Mantenimiento+del+Hogar') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    min-height: 400px; /* Ajusta la altura según necesites */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Sección Servicios */
+.services {
+    padding: 40px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #0779e4;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-item {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Sección Nosotros */
+.about {
+    padding: 40px 0;
+    background: #e9e9e9;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0779e4;
+}
+
+.about p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sección Contacto */
+.contact {
+    padding: 40px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0779e4;
+}
+
+.contact p {
+    margin-bottom: 25px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Ajusta el ancho para el padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact .btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+/* Pie de Página */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header h1,
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+</style>
+<body>
+    
+    <header>
+        
+        <div class="container">
+            <h1>Mantenimiento del Hogar</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <img src="C:\tarea 01\hogar\images (1).jpg" alt="expertos">
+            <h2>Expertos en Mantenimiento para tu Hogar</h2>
+            <p>Desde reparaciones menores hasta grandes proyectos, cuidamos tu espacio.</p>
+            <a href="#contacto" class="btn">Solicita un Presupuesto</a>
+        </div>
+    </section>
+
+   <section id="servicios" class="services">
+    <div class="container">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="C:\tarea 01\hogar\descarga.jpg" alt="Servicio de Fontanería">
+                <h3>Fontanería</h3>
+                <p>Reparación de fugas, instalación de grifos, mantenimiento de tuberías.</p>
+            </div>
+            <div class="service-item">
+                <img src="C:\tarea 01\hogar\electricista.jgp.jpg" alt="Servicio de Electricidad">
+                <h3>Electricidad</h3>
+                <p>Instalaciones eléctricas, reparación de averías, iluminación.</p>
+            </div>
+            <div class="service-item">
+                <img src="C:\tarea 01\hogar\pintura.jpg" alt="Servicio de Pintura">
+                <h3>Pintura</h3>
+                <p>Pintura interior y exterior, preparación de superficies.</p>
+            </div>
+            <div class="service-item">
+                <img src="C:\tarea 01\hogar\carpinteria.jpg" alt="Servicio de Carpintería">
+                <h3>Carpintería</h3>
+                <p>Reparación de muebles, instalación de puertas, estanterías.</p>
+            </div>
+            <div class="service-item">
+                <img src="C:\tarea 01\hogar\images.jpg" alt="Servicio de Jardinería">
+                <h3>Jardinería</h3>
+                <p>Mantenimiento de jardines, poda, sistemas de riego.</p>
+            </div>
+            <div class="service-item">
+                <img src="C:\tarea 01\hogar\LIMPIEZA.jpg" alt="Servicio de Limpieza">
+                <h3>Limpieza</h3>
+                <p>Limpieza profunda, mantenimiento regular, limpieza post-obra.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="nosotros" class="about">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos un equipo de profesionales dedicados a ofrecer soluciones integrales de mantenimiento para tu hogar. Con años de experiencia, garantizamos calidad, eficiencia y un servicio al cliente excepcional.</p>
+            <p>Nuestra misión es hacer tu vida más fácil, encargándonos de las tareas de mantenimiento para que puedas disfrutar de tu hogar sin preocupaciones.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¿Necesitas ayuda con el mantenimiento de tu hogar? ¡Estamos aquí para ayudarte!</p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></
